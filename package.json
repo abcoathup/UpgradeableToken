@@ -1,0 +1,27 @@
+{
+  "name": "UpgradeableToken",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abcoathup/UpgradeableToken.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abcoathup/UpgradeableToken/issues"
+  },
+  "homepage": "https://github.com/abcoathup/UpgradeableToken#readme",
+  "dependencies": {
+    "@openzeppelin/cli": "^2.6.0",
+    "@openzeppelin/contracts-ethereum-package": "^2.3.0",
+    "@openzeppelin/upgrades": "^2.6.0",
+    "chai": "^4.2.0",
+    "truffle": "^5.1.0"
+  }
+}
