@@ -12,5 +12,5 @@ npx truffle compile
 
 ## Test
 ```
-npx oz test
+npx truffle test
 ```
