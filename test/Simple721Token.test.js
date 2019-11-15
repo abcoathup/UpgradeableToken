@@ -9,7 +9,9 @@ const Simple721Token = Contracts.getFromLocal('Simple721Token');
 
 require('chai').should();
 
-contract('Simple721Token', function ([minter, other]) {
+contract('Simple721Token', function ([_, minter, other]) {
+
+  const firstTokenId = 1;
 
   beforeEach(async function () {
     this.project = await TestHelper();
@@ -19,5 +21,11 @@ contract('Simple721Token', function ([minter, other]) {
   it('should have a name', async function () {
     const result = await this.proxy.methods.name().call();
     result.should.eq('Simple721Token');
+  })
+
+  it.only('should mint', async function () {
+    await this.proxy.methods.mint(other, firstTokenId).send({from: minter});
+    // const result = await this.proxy.methods.ownerOf(firstTokenId).call()
+    // result.should.eq(other);
   })
 })
