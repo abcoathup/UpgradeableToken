@@ -23,9 +23,9 @@ contract('Simple721Token', function ([_, minter, other]) {
     result.should.eq('Simple721Token');
   })
 
-  it.only('should mint', async function () {
-    await this.proxy.methods.mint(other, firstTokenId).send({from: minter});
-    // const result = await this.proxy.methods.ownerOf(firstTokenId).call()
-    // result.should.eq(other);
+  it('should mint', async function () {
+    await this.proxy.methods.mint(other, firstTokenId).send({from: minter, gas: 5e6});
+    const result = await this.proxy.methods.ownerOf(firstTokenId).call()
+    result.should.eq(other);
   })
 })

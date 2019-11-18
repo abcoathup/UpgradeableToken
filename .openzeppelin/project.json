@@ -1,8 +1,10 @@
 {
   "manifestVersion": "2.2",
-  "contracts": {},
+  "contracts": {
+    "Simple721Token": "Simple721Token"
+  },
   "dependencies": {
-    "@openzeppelin/contracts-ethereum-package": "^2.3.0"
+    "@openzeppelin/contracts-ethereum-package": "^2.4.0"
   },
   "name": "UpgradeableToken",
   "version": "1.0.0",
